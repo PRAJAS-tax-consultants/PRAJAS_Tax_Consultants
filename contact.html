@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Contact Us | PRAJAS Tax Consultants</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #f4f6f9;
+      margin: 0;
+      padding: 0;
+      color: #2c3e50;
+    }
+
+    .header {
+      background-color: #0b1e36;
+      color: white;
+      padding: 30px 0;
+      text-align: center;
+      font-size: 28px;
+      font-weight: bold;
+    }
+
+    .container {
+      display: flex;
+      justify-content: center;
+      padding: 40px 20px;
+    }
+
+    .form-box {
+      background: white;
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      width: 100%;
+      max-width: 600px;
+    }
+
+    .form-box h2 {
+      text-align: center;
+      margin-bottom: 20px;
+      color: #1a237e;
+    }
+
+    form label {
+      display: block;
+      margin-bottom: 10px;
+    }
+
+    form input,
+    form select,
+    form textarea {
+      width: 100%;
+      padding: 10px;
+      margin-top: 4px;
+      margin-bottom: 20px;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+    }
+
+    form button {
+      width: 100%;
+      padding: 12px;
+      background-color: #1a237e;
+      color: white;
+      border: none;
+      border-radius: 6px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+
+    #thanksMessage {
+      display: none;
+      color: green;
+      text-align: center;
+      margin-top: 20px;
+    }
+
+    .footer {
+      margin-top: 60px;
+      background-color: #0b1e36;
+      color: white;
+      text-align: center;
+      padding: 20px;
+      font-size: 14px;
+    }
+
+    .footer a {
+      color: #bbdefb;
+      text-decoration: none;
+    }
+
+    .footer a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="header">
+    Contact PRAJAS Tax Consultants
+  </div>
+  
+  <div class="container">
+    <div class="form-box">
+      <h2>We’d Love to Hear From You</h2>
+
+      <form id="contactForm" action="https://script.google.com/macros/s/AKfycby7W6xzDl7mxry_vWwoSlyh7FljG-4RXJMEoPECOpMJxLbGoWENQ_FyqFDv-idOK8PLHw/exec" method="POST" onsubmit="return handleSubmit(event)">
+        <label>Name:
+          <input type="text" name="name" pattern="[A-Za-z ]+" title="Only alphabets allowed" required>
+        </label>
+
+        <label>Email:
+          <input type="email" name="email" required>
+        </label>
+
+        <label>Phone:
+          <input type="tel" name="phone" pattern="[0-9]{10}" title="Enter 10 digit phone number" required>
+        </label>
+
+        <label>Service Interested In:
+          <select name="service" required>
+            <option value="" disabled selected>Select a service</option>
+            <option value="Income Tax Filing">Income Tax Filing</option>
+            <option value="GST Registration & Returns">GST Registration & Returns</option>
+            <option value="Business Registration">Business Registration</option>
+            <option value="Accounting & Bookkeeping">Accounting & Bookkeeping</option>
+            <option value="Consultation">Consultation</option>
+            <option value="Other Compliance Services">Other Compliance Services</option>
+          </select>
+        </label>
+
+        <label>Message:
+          <textarea name="message" rows="5" required></textarea>
+        </label>
+
+        <button type="submit">Submit</button>
+      </form>
+
+      <div id="thanksMessage">
+        <h3>Thank you! Your message has been submitted.</h3>
+      </div>
+    </div>
+  </div>
+    
+    <div style="text-align: center; margin-top: 2rem; font-size: 1.1rem;">
+      <p>📞 Phone: +91-7550175067</p>
+      <p>📧 Email: prajasconsultants@gmail.com</p> |
+         💬 <a href="https://wa.me/917550175067" target="_blank">Chat on WhatsApp</a> |
+    </div>
+
+    <div style="text-align: center; margin-top: 2rem;">
+      <a href="https://maps.app.goo.gl/b9FjPyJqyLiaSj9Z9">📍 Find us on Google Maps</a>
+    </div>
+
+  <div class="footer">
+    <p>© 2025 All Rights Reserved by PRAJAS Tax Consultants</p>
+  </div>
+
+  <script>
+    function handleSubmit(e) {
+      e.preventDefault();
+      const form = document.getElementById('contactForm');
+      const data = new FormData(form);
+
+      fetch(form.action, {
+        method: "POST",
+        body: data
+      }).then(() => {
+        form.reset();
+        form.style.display = 'none';
+        document.getElementById('thanksMessage').style.display = 'block';
+      }).catch(() => {
+        alert("There was an error submitting the form. Please try again later.");
+      });
+
+      return false;
+    }
+  </script>
+
+</body>
+</html>

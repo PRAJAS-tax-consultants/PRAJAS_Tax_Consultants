@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Our Services | PRAJAS Tax Consultants</title>
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    .services-container {
+      padding: 2rem;
+      text-align: center;
+    }
+
+    .services-container h2 {
+      margin-bottom: 2rem;
+      font-size: 2rem;
+      color: #0c1e3a;
+    }
+
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 2rem;
+    }
+
+    .service-card {
+      background-color: #f9f9f9;
+      padding: 2rem;
+      border-radius: 12px;
+      box-shadow: 0 0 15px rgba(0,0,0,0.05);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .service-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 5px 25px rgba(0,0,0,0.1);
+    }
+
+    .service-card img {
+      height: 60px;
+      margin-bottom: 1rem;
+    }
+
+    .service-card h3 {
+      color: #0c1e3a;
+      margin-bottom: 0.5rem;
+    }
+
+    .service-card p {
+      color: #444;
+      margin-bottom: 1rem;
+    }
+
+    .service-card a {
+      text-decoration: none;
+      color: white;
+      background-color: #0c1e3a;
+      padding: 0.5rem 1rem;
+      border-radius: 5px;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="logo-container">
+      <img src="assets/logo.png" alt="PRAJAS Logo" />
+      <h1>PRAJAS Tax Consultants</h1>
+    </div>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="services-container">
+    <h2>Our Professional Services</h2>
+    <div class="services-grid">
+      <div class="service-card">
+        <img src="assets/income-tax.png" alt="Income Tax Icon" />
+        <h3>Income Tax Filing</h3>
+        <p>Expert assistance in filing and planning income tax returns for individuals and businesses.</p>
+        <a href="services/income-tax.html">View More</a>
+      </div>
+      <div class="service-card">
+        <img src="assets/gst.png" alt="GST Icon" />
+        <h3>GST Services</h3>
+        <p>Registration, returns, reconciliation, and consultancy for GST compliance.</p>
+        <a href="services/gst.html">View More</a>
+      </div>
+      <div class="service-card">
+        <img src="assets/accounting.png" alt="Accounting Icon" />
+        <h3>Accounting & Bookkeeping</h3>
+        <p>Accurate maintenance of books and financial records as per legal standards.</p>
+        <a href="services/accounting.html">View More</a>
+      </div>
+      <div class="service-card">
+        <img src="assets/tds.png" alt="TDS Icon" />
+        <h3>TDS Compliance</h3>
+        <p>End-to-end TDS deduction, payment, filing, and certificate generation services.</p>
+        <a href="services/tds.html">View More</a>
+      </div>
+      <div class="service-card">
+        <img src="assets/roc.png" alt="ROC Icon" />
+        <h3>ROC Compliance</h3>
+        <p>Company annual returns, board resolutions, director changes, and MCA compliance filings.</p>
+        <a href="services/roc.html">View More</a>
+      </div>
+      <div class="service-card">
+        <img src="assets/other.png" alt="Other Icon" />
+        <h3>Other Services</h3>
+        <p>ESI, EPF, PAN/TAN Application, etc.</p>
+        <a href="services/other.html">View More</a>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 PRAJAS Tax Consultants | All Rights Reserved</p>
+  </footer>
+</body>
+</html>
